@@ -20,6 +20,7 @@ class TPQueue {
     }
     ITEM* tail;
     ITEM* head;
+
  public:
     TPQueue():head(nullptr), tail(nullptr) {}
     void push(const T& value) {
