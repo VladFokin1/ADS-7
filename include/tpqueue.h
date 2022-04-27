@@ -26,7 +26,7 @@ class TPQueue {
     void push(const T& value) {
         ITEM* temp = head;
         ITEM* item = create(value);
-        while (temp && temp->data.prior >= data.prior) {
+        while (temp && temp->data.prior >= value.prior) {
             temp = temp->next;
         }
         if (!temp && head) {
@@ -58,7 +58,7 @@ class TPQueue {
             if (!head) {
                 tail = nullptr;
             }
-            return data;
+            return value;
         } else {
             throw std::string("Error!");
         }
