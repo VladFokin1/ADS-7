@@ -5,7 +5,7 @@
 
 template<typename T>
 class TPQueue {
-  private:
+ private:
     struct ITEM {
         T data;
         ITEM* next;
@@ -17,7 +17,7 @@ class TPQueue {
         item->prev = nullptr;
         item->next = nullptr;
         return item;
-    };
+    }
     ITEM* tail;
     ITEM* head;
  public:
@@ -52,20 +52,6 @@ class TPQueue {
                 temp->prev = nullptr;
             }
             T value = head->data;
-            delete head;
-            head = temp;
-            if (!head) {
-                tail = nullptr;
-            }
-            return data;
-        } else {
-            throw std::string("Error!");
-        }if (head && tail) {
-            ITEM* temp = head->next;
-            if (temp) {
-                temp->prev = nullptr;
-            }
-            T value = head->value;
             delete head;
             head = temp;
             if (!head) {
